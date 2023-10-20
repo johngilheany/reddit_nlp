@@ -1,21 +1,26 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 3: Web APIs & NLP
+# Project 3: Web APIs & NLP
 
-### Description
+### Problem Statement
 
-In week four we learned about a few different classifiers. In week five we're learning about webscraping, APIs, and Natural Language Processing (NLP). This project will put those skills to the test.
+Our consulting firm, General Assembly Solutions (GAS), has been hired by Robinhood Markets, Inc. to advise on the marketing of a relatively new product. Robinhood is a financial services company that provides customers with commission-free trades of stocks and has recently expanded its offering into cryptocurrency. Robinhood is a regular advertiser on Reddit.com, with a strong presence among its public markets related subreddits such as WallStreetBets. Robinhood would like our help in better understanding the content and language differences between public markets subreddits it is currently advertising on, and cryptocurrency subreddits it is planning to advertise on. Ultimately, Robinhood would like us to build a classification model that can predict whether a post belongs to a public equity or cryptocurrency subreddit, such that it can tailor its advertising strategy appropriately. 
 
-For project 3, your goal is two-fold:
-1. Using [PRAW](https://praw.readthedocs.io/en/stable/index.html), you'll collect posts from two subreddits of your choosing.
-2. You'll then use NLP to train a classifier on which subreddit a given post came from. This is a binary classification problem.
+---
 
+#### Data Overview & Visualization
 
-#### About the API
+Using the Python Reddit API Wrapper [(PRAW)](https://praw.readthedocs.io/en/stable/), over 5k posts were scraped across new, controversial, hot, rising and top posts. The proportion of data collected was roughly equally split between the WallStreetBets and CryptoMoonShots subreddits. 
 
-For this project, you will be using [PRAW](https://praw.readthedocs.io/en/stable/index.html) to collect posts from two different subreddits. 
+Looking at the distribution of subreddit title lengths, we can see that both WSB and CMS are right skewed. WSB has a mean title length of 54.5 characters, and a mean number of title words of 10.0 words. CMS has a mean title length of 98.9 characters, and a mean number of title words of 17.3 words.
 
-To help you get started, we have a [notebook](./Reddit-PRAW-tutorial.ipynb) detailing the process of creating an app and obtaining your API credentials.
+<img src="imgs/WSBtitledistrb.png" width="500"/> <img src="imgs/CMStitledistrb.png" width="500"/>
 
-Note: Rather than working in this template notebook, make a brand new "scraping" notebook (or script), with your own unique work and comments, so you can use this project in a portfolio!
+The 15 most common words by subreddit also show notable differences. WSB top words include *GME*, *market*, *stock*, *short* and *shares*, compared to top words in CMS such as *token*, *community*, *twitter*, *project*, *team* and *crypto*. 
+
+<img src="imgs/WSBtop15words.png" width="500"/> <img src="imgs/CMStop15words.png" width="500"/>
+
+The top bigrams for WSB include phrases such as *hedge funds*, *short squeeze* and *market cap* compared to terms such as *pancakeswap finance*, *liquidity pool* and *smart contract* for CMS.
+
+<img src="imgs/WSBtop15bigrams.png" width="500"/> <img src="imgs/CMStop15bigrams.png" width="500"/>
 
 ---
 
