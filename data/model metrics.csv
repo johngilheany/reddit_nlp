@@ -1,0 +1,7 @@
+﻿Model,Accuracy,Recall,Precision
+Logistic Regression (LogReg),98.6%,97.9%,99.4%
+Extra Trees Classifier (ET),98.0%,96.4%,99.5%
+Random Forest (RF),97.8%,96.7%,98.9%
+Multinomial Naive Bayes (Count Vectorizer),97.2%,98.1%,96.3%
+Multinomial Naive Bayes (Tfid Vectorizer),96.9%,98.2%,95.5%
+K-Nearest Neighbors (KNN),89.0%,81.5%,96.8%
