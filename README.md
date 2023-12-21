@@ -1,4 +1,4 @@
-# **Project 3: Reddit APIs & NLP**
+# **Reddit API & NLP Analysis**
 
 ### Problem Statement
 
